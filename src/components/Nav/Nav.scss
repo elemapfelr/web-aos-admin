@@ -1,0 +1,127 @@
+@import "./../../scss/bundle";
+
+nav {
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px $shadow;
+    }
+
+    menu {
+        margin-top: 50px;
+        width: 100%;
+        height: calc(100% - 200px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            display: none;
+        }
+
+        .menuGroup {
+            width: 100%;
+            margin: 20px 0;
+
+            &:nth-child(1) {
+                margin: 0;
+            }
+
+            .menuGroupTitle {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                color: transparentize($secondary, .3);
+                transition: all .3s;
+                cursor: pointer;
+                position: relative;
+                margin-bottom: 5px;
+
+                &:hover {
+                    color: $primary;
+                }
+
+
+                i {
+                    position: absolute;
+                    font-size: 30px;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+
+                p {
+                    margin-left: 60px;
+                    width: 100%;
+                    font-size: 1rem;
+                    text-align: left;
+                }
+            }
+
+            ul {
+                li {
+                    color: transparentize($secondary, .3);
+                    transition: all .3s;
+                    cursor: pointer;
+                    width: 100%;
+                    text-align: left;
+                    margin-left: 60px;
+                    padding: 8px 0;
+                    padding-left: 10px;
+                    box-sizing: border-box;
+                    border-radius: 30px 0 0 30px;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: $white;
+                        background-color: $primary-lighter;
+                    }
+                }
+            }
+        }
+    }
+
+    .settingMenu {
+        display: flex;
+        align-content: center;
+        height: 20px;
+        position: absolute;
+        bottom: 30px;
+        color: $secondary;
+        cursor: pointer;
+        transition: all .3s;
+        width: 240px;
+        padding: 10px 0;
+
+        &:hover{
+            color: $primary;
+        }
+    
+        i {
+            position: absolute;
+            font-size: 20px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        p {
+            margin-left: 60px;
+            width: 100%;
+            font-size: 14px;
+            text-align: left;
+            font-weight: 500;
+        }
+
+    }
+}

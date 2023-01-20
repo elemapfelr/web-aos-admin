@@ -1,0 +1,77 @@
+@import "./color", "./font";
+
+button {
+    border: none;
+    background: none;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+    @include fontSans;
+
+    &:disabled{
+        pointer-events: none;
+        filter: opacity(.65);
+    }
+
+    &.primary {
+        color: $white;
+        background-color: $primary;
+        &:hover {filter: brightness(.9);}
+    }
+
+    &.secondary {
+        color: $white;
+        background-color: $secondary;
+        &:hover {filter: brightness(.9);}
+    }
+
+    &.caution {
+        color: $white;
+        background-color: $caution;
+        &:hover {filter: brightness(.9);}
+    }
+
+    &.danger {
+        color: $white;
+        background-color: $danger;
+        &:hover {filter: brightness(.9);}
+    }
+
+    &.crush {
+        color: $white;
+        background-color: $crush;
+        &:hover {filter: brightness(.9);}
+    }
+
+    &.outline-primary {
+        color: $primary;
+        border: 1px solid $primary;
+        &:hover{color: #fff;background-color: $primary;}
+    }
+
+    &.outline-secondary {
+        color: $secondary;
+        border: 1px solid $secondary;
+        &:hover{color: #fff;background-color: $secondary;}
+    }
+
+    &.outline-caution {
+        color: $caution;
+        border: 1px solid $caution;
+        &:hover{color: #fff;background-color: $caution;}
+    }
+
+    &.outline-danger {
+        color: $danger;
+        border: 1px solid $danger;
+        &:hover{color: #fff;background-color: $danger;}
+    }
+
+    &.outline-crush {
+        color: $crush;
+        border: 1px solid $crush;
+        &:hover{color: #fff;background-color: $crush;}
+    }
+}

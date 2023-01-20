@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "NotoSansKR";
+    src: url("./../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf") format("opentype");
+  }
+@font-face {
+    font-family: "OpenSans";
+    src: url("./../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  }
+
+@mixin fontSans{
+    font-family: "OpenSans", "NotoSansKR", sans-serif;
+}
