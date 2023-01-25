@@ -1,0 +1,54 @@
+@import "./../../scss/bundle";
+
+aside{
+    .userBox{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 20px;
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px $shadow;
+
+        .topProfile{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+
+            p{
+                cursor: default;
+            }
+
+            a{
+                padding-left: 10px;
+            }
+
+            p, i{
+                font-size: .8rem;
+                color: $primary-lighter;
+            }
+        }
+
+        p{
+            &#userId{
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $primary;
+            }
+            &#leftTime{
+                margin: 5px 0;
+                font-size: .8rem;
+                color: $secondary;
+            }
+        }
+        .flexBox{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button{
+                margin: 0 5px;
+            }
+        }
+    }
+}

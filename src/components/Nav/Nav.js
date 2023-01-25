@@ -1,92 +1,111 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Nav.scss';
+import axios from 'axios';
 
 function Nav() {
 	const navigate = useNavigate();
-	return (
-		<nav>
-			<div className="logo">LOGO</div>
-			<menu>
-				<div className="menuGroup">
-					<div className="menuGroupTitle">
-						<i className="fa-solid fa-box"></i>
-						<p>Menu Group 1</p>
+	const [menuData, setMenuData] = useState(null);
+	const [menuGroupActive, setMenuGroupActive] = useState();
+	const [menuActive, setMenuActive] = useState();
+	const [navState, setNavState] = useState('');
+
+	function toggleActive(seq_no) {
+		if (seq_no == menuGroupActive) {
+			setMenuGroupActive();
+		} else {
+			setMenuGroupActive(seq_no);
+		}
+	}
+
+	function toggleActiveMenu(seq_no) {
+		if (seq_no == menuActive) {
+			setMenuActive();
+		} else {
+			setMenuActive(seq_no);
+		}
+	}
+
+	useEffect(() => {
+		axios.get('./menuData.json').then((res) => {
+			setMenuData(res.data);
+		});
+	}, []);
+
+	if (menuData) {
+		return (
+			<>
+				<nav className={navState}>
+					<div className="logo">LOGO</div>
+					<menu>
+						{menuData.menu_group.map((menuGroup) => {
+							let filtered = menuData['menu'].filter(
+								(x) => x.menu_group_seq_no == menuGroup.menu_group_seq_no
+							);
+							return (
+								<div
+									className={
+										menuGroupActive == menuGroup.menu_group_seq_no
+											? 'menuGroup active'
+											: 'menuGroup'
+									}
+									key={menuGroup.menu_group_seq_no}
+								>
+									<div
+										className="menuGroupTitle"
+										onClick={() => {
+											toggleActive(menuGroup.menu_group_seq_no);
+										}}
+									>
+										<i className={menuGroup.menu_group_icon}></i>
+										<p>{menuGroup.menu_group_name}</p>
+									</div>
+									<ul
+										style={
+											menuGroupActive == menuGroup.menu_group_seq_no
+												? { maxHeight: filtered['length'] * 37 + 'px' }
+												: { maxHeight: 0 + 'px' }
+										}
+									>
+										{filtered.map((menu) => {
+											return (
+												<li
+													className={menuActive == menu.menu_seq_no ? 'active' : ''}
+													key={menu.menu_seq_no}
+													onClick={() => {
+														toggleActiveMenu(menu.menu_seq_no);
+													}}
+												>
+													<Link to={menu.menu_link_url}>{menu.menu_name}</Link>
+												</li>
+											);
+										})}
+									</ul>
+								</div>
+							);
+						})}
+					</menu>
+					<div
+						className="minimalizeMenu"
+						onClick={() => {
+							navState == '' ? setNavState('mini') : setNavState('');
+						}}
+					>
+						<i className="fa-solid fa-angle-left"></i>
+						<p>Minimalize Menu</p>
 					</div>
-					<ul>
-						<li>menu1</li>
-						<li>menu2</li>
-						<li>menu3</li>
-						<li>menu4</li>
-					</ul>
+				</nav>
+				<div
+					className={`openMenu ${navState}`}
+					onClick={() => {
+						setNavState('');
+					}}
+				>
+					MENU OPEN
 				</div>
-				<div className="menuGroup">
-					<div className="menuGroupTitle">
-						<i className="fa-solid fa-tower-cell"></i>
-						<p>Menu Group 2</p>
-					</div>
-					<ul>
-						<li>menu1</li>
-						<li>menu2</li>
-						<li>menu3</li>
-						<li>menu4</li>
-					</ul>
-				</div>
-				<div className="menuGroup">
-					<div className="menuGroupTitle">
-						<i className="fa-solid fa-box"></i>
-						<p>Menu Group 1</p>
-					</div>
-					<ul>
-						<li>menu1</li>
-						<li>menu2</li>
-						<li>menu3</li>
-						<li>menu4</li>
-					</ul>
-				</div>
-				<div className="menuGroup">
-					<div className="menuGroupTitle">
-						<i className="fa-solid fa-tower-cell"></i>
-						<p>Menu Group 2</p>
-					</div>
-					<ul>
-						<li>menu1</li>
-						<li>menu2</li>
-						<li>menu3</li>
-						<li>menu4</li>
-					</ul>
-				</div>
-				<div className="menuGroup">
-					<div className="menuGroupTitle">
-						<i className="fa-solid fa-box"></i>
-						<p>Menu Group 1</p>
-					</div>
-					<ul>
-						<li>menu1</li>
-						<li>menu2</li>
-						<li>menu3</li>
-						<li>menu4</li>
-					</ul>
-				</div>
-				<div className="menuGroup">
-					<div className="menuGroupTitle">
-						<i className="fa-solid fa-tower-cell"></i>
-						<p>Menu Group 2</p>
-					</div>
-					<ul>
-						<li>menu1</li>
-						<li>menu2</li>
-						<li>menu3</li>
-						<li>menu4</li>
-					</ul>
-				</div>
-			</menu>
-			<div className="settingMenu">
-				<i className="fa-solid fa-gear"></i>
-				<p>Settings</p>
-			</div>
-		</nav>
-	);
+			</>
+		);
+	}
 }
 
 export default Nav;

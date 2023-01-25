@@ -1,0 +1,874 @@
+{
+	"result_code": "P000",
+	"total_count": 29,
+	"menu": [
+		{
+			"menu_group_seq_no": null,
+			"menu_seq_no": 1,
+			"menu_name": "Dashboard",
+			"menu_content": "메인 인트로 페이지",
+			"menu_class": "index",
+			"menu_link_url": "/pages/dashboard",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "N",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-11-01 17:05:33",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": null,
+			"menu_seq_no": 2,
+			"menu_name": "My Page",
+			"menu_content": "마이 페이지",
+			"menu_class": "mypage",
+			"menu_link_url": "/system/mypage",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "N",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-27 13:27:17",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": null,
+			"menu_seq_no": 3,
+			"menu_name": "Site Map",
+			"menu_content": "사이트맵",
+			"menu_class": "sitemap",
+			"menu_link_url": "/system/siteMap",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "N",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-27 13:27:23",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": null,
+			"menu_seq_no": 5,
+			"menu_name": "Manual Popup",
+			"menu_content": "매뉴얼 팝업",
+			"menu_class": "manualpop",
+			"menu_link_url": "/system/manualPopup?popup=yes",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-27 13:27:30",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 1,
+			"menu_seq_no": 6,
+			"menu_name": "API Status",
+			"menu_content": "API Status 페이지",
+			"menu_class": "apistatus",
+			"menu_link_url": "/system/manageApiStatus",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-11-01 17:24:36",
+			"api": [
+				{
+					"api_seq_no": 4
+				},
+				{
+					"api_seq_no": 11
+				},
+				{
+					"api_seq_no": 26
+				},
+				{
+					"api_seq_no": 139
+				},
+				{
+					"api_seq_no": 20
+				},
+				{
+					"api_seq_no": 35
+				},
+				{
+					"api_seq_no": 43
+				},
+				{
+					"api_seq_no": 21
+				},
+				{
+					"api_seq_no": 60
+				},
+				{
+					"api_seq_no": 1
+				},
+				{
+					"api_seq_no": 15
+				},
+				{
+					"api_seq_no": 30
+				},
+				{
+					"api_seq_no": 38
+				},
+				{
+					"api_seq_no": 55
+				},
+				{
+					"api_seq_no": 2
+				},
+				{
+					"api_seq_no": 9
+				},
+				{
+					"api_seq_no": 24
+				},
+				{
+					"api_seq_no": 56
+				},
+				{
+					"api_seq_no": 137
+				},
+				{
+					"api_seq_no": 18
+				},
+				{
+					"api_seq_no": 33
+				},
+				{
+					"api_seq_no": 41
+				},
+				{
+					"api_seq_no": 57
+				},
+				{
+					"api_seq_no": 5
+				},
+				{
+					"api_seq_no": 12
+				},
+				{
+					"api_seq_no": 27
+				},
+				{
+					"api_seq_no": 58
+				},
+				{
+					"api_seq_no": 6
+				},
+				{
+					"api_seq_no": 13
+				},
+				{
+					"api_seq_no": 28
+				},
+				{
+					"api_seq_no": 36
+				},
+				{
+					"api_seq_no": 44
+				},
+				{
+					"api_seq_no": 7
+				},
+				{
+					"api_seq_no": 22
+				},
+				{
+					"api_seq_no": 135
+				},
+				{
+					"api_seq_no": 16
+				},
+				{
+					"api_seq_no": 31
+				},
+				{
+					"api_seq_no": 39
+				},
+				{
+					"api_seq_no": 3
+				},
+				{
+					"api_seq_no": 10
+				},
+				{
+					"api_seq_no": 25
+				},
+				{
+					"api_seq_no": 138
+				},
+				{
+					"api_seq_no": 19
+				},
+				{
+					"api_seq_no": 34
+				},
+				{
+					"api_seq_no": 42
+				},
+				{
+					"api_seq_no": 59
+				},
+				{
+					"api_seq_no": 14
+				},
+				{
+					"api_seq_no": 29
+				},
+				{
+					"api_seq_no": 37
+				},
+				{
+					"api_seq_no": 45
+				},
+				{
+					"api_seq_no": 8
+				},
+				{
+					"api_seq_no": 23
+				},
+				{
+					"api_seq_no": 136
+				},
+				{
+					"api_seq_no": 17
+				},
+				{
+					"api_seq_no": 32
+				},
+				{
+					"api_seq_no": 40
+				}
+			],
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 1,
+			"menu_seq_no": 7,
+			"menu_name": "API History",
+			"menu_content": "API History 페이지",
+			"menu_class": "apihistory",
+			"menu_link_url": "/system/manageApiHistory",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-28 13:21:47",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 1,
+			"menu_seq_no": 8,
+			"menu_name": "API List & Test",
+			"menu_content": "API List와 Test 페이지",
+			"menu_class": "apitest",
+			"menu_link_url": "/system/manageApi",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-28 13:41:44",
+			"api": [
+				{
+					"api_seq_no": 18
+				},
+				{
+					"api_seq_no": 33
+				},
+				{
+					"api_seq_no": 41
+				},
+				{
+					"api_seq_no": 57
+				},
+				{
+					"api_seq_no": 5
+				},
+				{
+					"api_seq_no": 12
+				},
+				{
+					"api_seq_no": 27
+				},
+				{
+					"api_seq_no": 58
+				},
+				{
+					"api_seq_no": 6
+				},
+				{
+					"api_seq_no": 13
+				},
+				{
+					"api_seq_no": 28
+				},
+				{
+					"api_seq_no": 36
+				},
+				{
+					"api_seq_no": 44
+				},
+				{
+					"api_seq_no": 7
+				},
+				{
+					"api_seq_no": 22
+				},
+				{
+					"api_seq_no": 135
+				},
+				{
+					"api_seq_no": 16
+				},
+				{
+					"api_seq_no": 31
+				},
+				{
+					"api_seq_no": 39
+				},
+				{
+					"api_seq_no": 3
+				},
+				{
+					"api_seq_no": 10
+				},
+				{
+					"api_seq_no": 25
+				},
+				{
+					"api_seq_no": 138
+				},
+				{
+					"api_seq_no": 19
+				},
+				{
+					"api_seq_no": 34
+				},
+				{
+					"api_seq_no": 42
+				},
+				{
+					"api_seq_no": 59
+				},
+				{
+					"api_seq_no": 14
+				},
+				{
+					"api_seq_no": 29
+				},
+				{
+					"api_seq_no": 37
+				},
+				{
+					"api_seq_no": 45
+				},
+				{
+					"api_seq_no": 8
+				},
+				{
+					"api_seq_no": 23
+				},
+				{
+					"api_seq_no": 136
+				},
+				{
+					"api_seq_no": 17
+				},
+				{
+					"api_seq_no": 32
+				},
+				{
+					"api_seq_no": 40
+				},
+				{
+					"api_seq_no": 4
+				},
+				{
+					"api_seq_no": 11
+				},
+				{
+					"api_seq_no": 26
+				},
+				{
+					"api_seq_no": 139
+				},
+				{
+					"api_seq_no": 20
+				},
+				{
+					"api_seq_no": 35
+				},
+				{
+					"api_seq_no": 43
+				},
+				{
+					"api_seq_no": 21
+				},
+				{
+					"api_seq_no": 60
+				},
+				{
+					"api_seq_no": 1
+				},
+				{
+					"api_seq_no": 15
+				},
+				{
+					"api_seq_no": 30
+				},
+				{
+					"api_seq_no": 38
+				},
+				{
+					"api_seq_no": 55
+				},
+				{
+					"api_seq_no": 2
+				},
+				{
+					"api_seq_no": 9
+				},
+				{
+					"api_seq_no": 24
+				},
+				{
+					"api_seq_no": 56
+				},
+				{
+					"api_seq_no": 137
+				}
+			],
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 2,
+			"menu_seq_no": 9,
+			"menu_name": "회원 관리",
+			"menu_content": "회원 관리 페이지",
+			"menu_class": "memberadmin",
+			"menu_link_url": "/system/manageUser",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-28 13:13:45",
+			"api": [
+				{
+					"api_seq_no": 20
+				},
+				{
+					"api_seq_no": 1
+				},
+				{
+					"api_seq_no": 55
+				},
+				{
+					"api_seq_no": 56
+				},
+				{
+					"api_seq_no": 57
+				},
+				{
+					"api_seq_no": 5
+				},
+				{
+					"api_seq_no": 12
+				},
+				{
+					"api_seq_no": 27
+				},
+				{
+					"api_seq_no": 6
+				}
+			],
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 2,
+			"menu_seq_no": 10,
+			"menu_name": "권한 관리",
+			"menu_content": "권한 관리 페이지",
+			"menu_class": "authadmin",
+			"menu_link_url": "/system/manageAuth",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-31 11:18:52",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 2,
+			"menu_seq_no": 11,
+			"menu_name": "메뉴 관리",
+			"menu_content": "메뉴 관리 페이지",
+			"menu_class": "menuadmin",
+			"menu_link_url": "/system/manageMenu",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-28 10:20:01",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 2,
+			"menu_seq_no": 13,
+			"menu_name": "도움말 관리",
+			"menu_content": "Manual 관리 페이지",
+			"menu_class": "manual",
+			"menu_link_url": "/system/manageManual",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-11-01 10:35:11",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 4,
+			"menu_seq_no": 14,
+			"menu_name": "Style Guide",
+			"menu_content": "스타일 가이드 페이지",
+			"menu_class": "styleguide",
+			"menu_link_url": "/system/styleGuide",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-27 10:25:36",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 2,
+			"menu_seq_no": 30,
+			"menu_name": "스케줄러 관리",
+			"menu_content": "스케줄러 관리 페이지",
+			"menu_class": null,
+			"menu_link_url": "/system/manageScheduler",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-11-01 10:35:20",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 31,
+			"menu_name": "AOS 권한 관리",
+			"menu_content": "AOS 권한 관리 페이지입니다.",
+			"menu_class": null,
+			"menu_link_url": "/system/manageAuth?project=aos",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-31 18:02:34",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 32,
+			"menu_name": "AOS 회원 관리",
+			"menu_content": "AOS 회원 관리 페이지",
+			"menu_class": null,
+			"menu_link_url": "/system/manageUser?project=aos",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-31 18:02:52",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 34,
+			"menu_name": "AOS API 히스토리",
+			"menu_content": "AOS API 히스토리 페이지",
+			"menu_class": null,
+			"menu_link_url": "/system/manageApiHistory?project=aos",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-31 18:03:03",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 3,
+			"menu_seq_no": 39,
+			"menu_name": "API 통계",
+			"menu_content": "API 통계",
+			"menu_class": null,
+			"menu_link_url": "/pages/apiStatistics",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-12-16 16:34:00",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 4,
+			"menu_seq_no": 41,
+			"menu_name": "회원 등록",
+			"menu_content": "수동 회원 등록",
+			"menu_class": null,
+			"menu_link_url": "/pages/customer/join",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "jhkim",
+			"reg_ts": "2022-10-27 13:42:12",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 28,
+			"menu_seq_no": 46,
+			"menu_name": "셀러봇 고객관리",
+			"menu_content": "셀러봇 고객관리",
+			"menu_class": null,
+			"menu_link_url": "/pages/cust/custMemberList",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2023-01-10 09:37:58",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 4,
+			"menu_seq_no": 47,
+			"menu_name": "php 정보",
+			"menu_content": "php server 정보를 확인할 수 있는 페이지 입니다.",
+			"menu_class": null,
+			"menu_link_url": "/system/phpInfo",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-12-16 18:09:32",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 29,
+			"menu_seq_no": 48,
+			"menu_name": "스크래핑요청",
+			"menu_content": "스크래핑요청리스트",
+			"menu_class": null,
+			"menu_link_url": "/pages/scrap/list",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-12-22 11:51:54",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 49,
+			"menu_name": "AOS API List & Test",
+			"menu_content": "AOS API 리스트와 Test 페이지",
+			"menu_class": null,
+			"menu_link_url": "/system/manageApi?project=aos",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2022-12-28 14:50:04",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 50,
+			"menu_name": "AOS 계좌조회(AIS)",
+			"menu_content": "계좌조회",
+			"menu_class": null,
+			"menu_link_url": "/pages/aos/accountList",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2023-01-10 09:44:32",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 51,
+			"menu_name": "AOS  NTF SMS",
+			"menu_content": "SMS발송",
+			"menu_class": null,
+			"menu_link_url": "/pages/aos/ntfList_sms",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2023-01-13 10:50:11",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 52,
+			"menu_name": "AOS 집금",
+			"menu_content": "짐급",
+			"menu_class": null,
+			"menu_link_url": "/pages/aos/coinageList",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2023-01-10 09:44:46",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 53,
+			"menu_name": "AOS 가상계좌",
+			"menu_content": "가상계좌",
+			"menu_class": null,
+			"menu_link_url": "/pages/aos/virtualaccountList",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2023-01-10 09:44:52",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 54,
+			"menu_name": "AOS  NTF KAKAO",
+			"menu_content": "알림톡 발송",
+			"menu_class": null,
+			"menu_link_url": "/pages/aos/ntfList_kakao",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2023-01-13 11:21:18",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_seq_no": 55,
+			"menu_name": "AOS  NTF EMAIL",
+			"menu_content": "이메일 발송",
+			"menu_class": null,
+			"menu_link_url": "/pages/aos/ntfList_email",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2023-01-13 11:21:05",
+			"api": null,
+			"menu_func": null
+		},
+		{
+			"menu_group_seq_no": 4,
+			"menu_seq_no": 56,
+			"menu_name": "권한 트리 (테스트)",
+			"menu_content": "유저 관리와 권한 관리를 보다 직관적으로 만들기 위한 실험 페이지",
+			"menu_class": null,
+			"menu_link_url": "/pages/userAuthTree",
+			"menu_use_yn": "Y",
+			"menu_view_yn": "Y",
+			"menu_auth_yn": "N",
+			"reg_id": "admin",
+			"reg_ts": "2023-01-16 14:34:23",
+			"api": null,
+			"menu_func": null
+		}
+	],
+	"menu_group": [
+		{
+			"menu_group_seq_no": 1,
+			"menu_group_name": "API",
+			"menu_group_content": "모든 API에 관련된 메뉴입니다.",
+			"menu_group_view_yn": "Y",
+			"menu_group_icon": "fa-solid fa-gear",
+			"reg_id": "admin",
+			"reg_ts": "2022-11-03 11:37:14"
+		},
+		{
+			"menu_group_seq_no": 2,
+			"menu_group_name": "시스템관리",
+			"menu_group_content": "시스템 관리에 필요한 메뉴입니다.",
+			"menu_group_view_yn": "Y",
+			"menu_group_icon": "fa-solid fa-hard-drive",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-25 16:19:02"
+		},
+		{
+			"menu_group_seq_no": 3,
+			"menu_group_name": "Statistics",
+			"menu_group_content": "통계와 관련된 메뉴입니다.",
+			"menu_group_view_yn": "Y",
+			"menu_group_icon": "fa-solid fa-chart-column",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-25 16:19:10"
+		},
+		{
+			"menu_group_seq_no": 4,
+			"menu_group_name": "개발자 메뉴",
+			"menu_group_content": "개발자 참고용 메뉴입니다.",
+			"menu_group_view_yn": "Y",
+			"menu_group_icon": "fa-solid fa-code",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-25 16:19:17"
+		},
+		{
+			"menu_group_seq_no": 12,
+			"menu_group_name": "AOS",
+			"menu_group_content": "AOS 관련 설정 메뉴입니다",
+			"menu_group_view_yn": "Y",
+			"menu_group_icon": "fa-solid fa-puzzle-piece",
+			"reg_id": "admin",
+			"reg_ts": "2022-10-25 16:19:28"
+		},
+		{
+			"menu_group_seq_no": 28,
+			"menu_group_name": "고객관리",
+			"menu_group_content": "셀러봇 고객관리",
+			"menu_group_view_yn": "Y",
+			"menu_group_icon": "fa-solid fa-user-gear",
+			"reg_id": "admin",
+			"reg_ts": "2022-12-16 17:09:01"
+		},
+		{
+			"menu_group_seq_no": 29,
+			"menu_group_name": "스크래핑",
+			"menu_group_content": "스크래핑 관련 화면",
+			"menu_group_view_yn": "Y",
+			"menu_group_icon": "fa-solid fa-layer-group",
+			"reg_id": "admin",
+			"reg_ts": "2022-12-22 11:50:25"
+		}
+	],
+	"result_msg": "정상",
+	"bookmark": "apires1"
+}
