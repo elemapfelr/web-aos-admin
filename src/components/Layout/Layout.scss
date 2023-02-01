@@ -2,30 +2,72 @@
 
 #wrap{
     width: 100vw;
-    height: 97vh;
-    padding-top: 3vh;
+    height: 100vh;
     overflow: hidden;
     display: flex;
-    background-color: $primary-lightest;
+    flex-wrap: wrap;
+    background-color: $white;
+
+    &.changingToNormalSize{
+        transition: all .3s;
+        height: 100vh;
+    }
+
+    &.fullScreen{
+        transition: all .3s;
+        height: 100vh;
+        header{
+            height: 0px !important;
+            overflow: hidden;
+            opacity: 0;
+        }
+        nav{
+            width: 0px !important;
+            overflow: hidden;
+            opacity: 0;
+        }
+        main{
+            height: 100%;
+        }
+        aside{
+            width: 0px !important;
+            overflow: hidden;
+            opacity: 0;
+        }
+        .openMenu{
+            transform: translateX(-22px);
+        }
+        .openAside{
+            transform: translateX(32px);
+        }
+    }
+
+    header{
+        width: 100%;
+        height: 50px;
+        transition: all .3s;
+        background-color: $primary-dark;
+        z-index: 1;
+    }
 
     nav{
-        width: 300px;
-        height: 100%;
+        width: 250px;
+        height: calc(100% - 50px);
         box-sizing: border-box;
         transition: all .3s;
         position: relative;
+        background-color: $white-light;
+        border-right: 1px solid $primary-lightest;
     }
     main{
         flex: 1;
-        height: 100%;
+        height: calc(100% - 50px);
         background-color: $white;
-        border-radius: 20px 20px 0 0;
-        box-shadow: 0px 0px 15px $shadow;
         transition: all .3s;
     }
     aside{
-        width: 300px;
-        height: 100%;
+        width: 250px;
+        height: calc(100% - 50px);
         box-sizing: border-box;
         transition: all .3s;
     }

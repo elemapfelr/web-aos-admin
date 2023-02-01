@@ -1,0 +1,75 @@
+@import "./../../scss/bundle";
+
+.list{
+    width: 100%;
+    height: auto;
+    border: 1px solid lighten($gray, 20%);
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .depth1{
+        width: 100%;
+        height: auto;
+
+        .title{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid lighten($gray, 20%);
+            box-sizing: border-box;
+            cursor: pointer;
+            
+            i{
+                margin-left: 10px;
+                margin-right: 20px;
+                color: lighten($secondary, 10%);
+            }
+            p{
+                font-size: 1rem;
+            }
+
+            &:hover{
+                background-color: lighten($shadow, 20%);
+                color: $secondary;
+            }
+        }
+
+        ul.depth2{
+            li{
+                padding: 5px 0;
+                padding-left: 60px;
+                cursor: pointer;
+                font-size: .9rem;
+
+                &:hover{
+                    background-color: lighten($shadow, 20%);
+                    color: $secondary;
+                }
+            }
+        }
+
+        &:last-child{
+            ul.depth2{
+                li:last-child{
+                    border-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    &.accordion{
+        .depth1{
+            ul.depth2{
+                transition: all .3s;
+                display: none;
+            }
+            &.active{
+                ul.depth2{
+                    display: block;
+                }
+            }
+        }
+    }
+}

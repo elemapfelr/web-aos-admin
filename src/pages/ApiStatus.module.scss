@@ -1,0 +1,143 @@
+@import "./../scss/bundle";
+
+article {
+    &.summary {
+        width: 100%;
+        height: 200px;
+
+        .content {
+            width: 100%;
+            height: calc(100% - 34px);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            column-gap: 15px;
+            margin-top: 10px;
+
+            h5 {
+                text-indent: 0;
+                text-align: center;
+                font-weight: normal;
+                // color: $fff;
+            }
+
+            .apiReq,
+            .apiCaution,
+            .apiErr,
+            .apiUnknown {
+                background-color: darken($white, 1%);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: .5rem solid;
+                box-sizing: border-box;
+
+                div {
+                    filter: opacity(.5);
+                    flex: 2;
+
+                    h5 {
+                        font-size: 1rem;
+                        text-indent: 1rem;
+                        text-align: left;
+
+                        &.num {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+
+                i {
+                    filter: opacity(.5);
+                    flex: 1;
+                    display: block;
+                    margin: 0 auto;
+                    font-size: 2rem;
+                }
+
+                &.active {
+
+                    div,
+                    i {
+                        filter: opacity(1);
+                    }
+                }
+            }
+
+            .apiReq {
+                border-color: $primary;
+
+                h5 {
+                    color: $primary;
+                }
+
+                i {
+                    color: $primary;
+                    animation: glow2 infinite 2s linear;
+                }
+            }
+
+            .apiCaution {
+                border-color: $caution;
+
+                h5 {
+                    color: $caution;
+                }
+
+                i {
+                    color: $caution;
+                }
+            }
+
+            .apiErr {
+                border-color: $crush;
+
+                h5 {
+                    color: $crush;
+                }
+
+                i {
+                    color: $crush;
+                }
+            }
+
+            .apiUnknown {
+                border-color: $gray;
+
+                h5 {
+                    color: $gray;
+                }
+
+                i {
+                    color: $gray;
+                }
+            }
+
+            .checkAPIBox {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                h5 {
+                    text-align: left;
+                    font-weight: bold;
+                }
+
+                p {
+                    margin: 0;
+                }
+
+                button {
+                    margin: 5px 0;
+                    padding: 5px 10px;
+                    cursor: primaryer;
+                    font-size: 1rem;
+                    display: block;
+
+                    i{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

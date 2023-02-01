@@ -8,7 +8,9 @@ import moment from 'moment';
 
 function Login() {
 	const [loading, setLoading] = useState(false);
+	const [id, setId] = useState('');
 	const [idState, setIdState] = useState('');
+	const [pw, setPw] = useState('');
 	const [pwState, setPwState] = useState('');
 	const navigate = useNavigate();
 
@@ -23,14 +25,45 @@ function Login() {
 		}
 	}
 
+	function loginProcess() {
+		setLoading(true);
+		console.log(`ID: ${id} PW: ${pw}`);
+		if (id == '') {
+			setLoading(false);
+			setIdState('아이디를 입력하세요');
+		} else if (pw == '') {
+			setLoading(false);
+			setPwState('비밀번호를 입력하세요');
+		} else {
+			axios({
+				url: '/api/v1',
+				method: 'POST',
+				data: 'hello',
+			}).then((res) => console.log(res.data));
+			// setTimeout(() => {
+			// 	let rand = Math.round(Math.random());
+			// 	if (rand == 1) {
+			// 		sessionStorage.setItem('isAuthorized', true);
+			// 		navigate('/');
+			// 	} else {
+			// 		let rand2 = Math.round(Math.random());
+			// 		rand2 == 1
+			// 			? setIdState('아이디를 다시 확인하세요')
+			// 			: setPwState('비밀번호를 다시 확인하세요');
+			// 		setLoading(false);
+			// 	}
+			// }, 2000);
+		}
+	}
+
 	return (
 		<div className={`${style.wrap} ${loading ? style.loader : style.deLoader}`}>
 			<div className={`${style.loginWrap}`}>
 				<div className={`${style.row}`}>
-					<div className={`${style.left}`}>Add On System</div>
+					<div className={`${style.left}`}>SIGN IN</div>
 					<div className={`${style.right}`}>
 						<span className={`${style.active}`}>Sign in</span>
-						<span>Sign up</span>
+						<span>Hiworks Login</span>
 						<span>Forgot Password</span>
 					</div>
 				</div>
@@ -45,8 +78,14 @@ function Login() {
 							<input
 								type="text"
 								placeholder="User ID"
-								onKeyUp={() => {
+								onChange={(e) => {
 									setIdState('');
+									setId(e.target.value);
+								}}
+								onKeyUp={(e) => {
+									if (window.event.keyCode == 13 && loading == false) {
+										loginProcess();
+									}
 								}}
 							/>
 							<i></i>
@@ -61,8 +100,14 @@ function Login() {
 							<input
 								type="password"
 								placeholder="Password"
-								onKeyUp={() => {
+								onChange={(e) => {
 									setPwState('');
+									setPw(e.target.value);
+								}}
+								onKeyUp={(e) => {
+									if (window.event.keyCode == 13 && loading == false) {
+										loginProcess();
+									}
 								}}
 							/>
 							<i></i>
@@ -79,24 +124,7 @@ function Login() {
 					<div className={`${style.right}`}>
 						<div className={`${style.loginTitle}`}></div>
 						<div className={`${style.loginBtnBox}`}>
-							<button
-								onClick={() => {
-									setLoading(true);
-									setTimeout(() => {
-										let rand = Math.round(Math.random());
-										if (rand == 1) {
-											sessionStorage.setItem('isAuthorized', true);
-											navigate('/');
-										} else {
-											setIdState('아이디를 다시 확인하세요');
-											setPwState('비밀번호를 다시 확인하세요');
-											setLoading(false);
-										}
-									}, 2000);
-								}}
-							>
-								Login
-							</button>
+							<button onClick={loginProcess}>Login</button>
 						</div>
 					</div>
 				</div>

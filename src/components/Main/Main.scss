@@ -1,0 +1,100 @@
+@import "./../../scss/bundle";
+
+main{
+    overflow: hidden;
+
+    .toolbar{
+        padding: 0 2.5%;
+        background-color: $white;
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid transparentize($gray, .8);
+        position: relative;
+
+        .leftBox{
+            width: max-content;
+
+            .breadCrumb{
+                display: flex;
+                align-items: center;
+                span{
+                    margin: 0 5px;
+                }
+                p,span{
+                    font-size: .8rem;
+                    color: $secondary;
+                    cursor: default;
+                }
+            }
+        }
+
+        .title{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+            color: $secondary-dark;
+        }
+
+        .rightBox{
+            width: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .leftBox, .rightBox{
+            i{
+                font-size: 18px;
+                color: $gray;
+                transition: all .3s;
+                padding: 12px;
+                cursor: pointer;
+
+                @include keyframes (tooltip){
+                    0%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 1;
+                    }
+                }
+
+                &:hover{
+                    color: $primary;
+                    box-shadow: 0px 0px 5px $shadow;
+                    position: relative;
+
+                    &::after{
+                        content: attr(data-tooltip);
+                        position: absolute;
+                        bottom: -20px;
+                        font-size: .8rem;
+                        display: block;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-family: 'OpenSans';
+                        font-weight: 500;
+                        opacity: 0;
+                        animation-name: tooltip;
+                        animation-timing-function: linear;
+                        animation-duration: .5s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards;
+                        background-color: $gray;
+                        color: white;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -45,6 +45,12 @@ button {
         &:hover {filter: brightness(.9);}
     }
 
+    &.gray {
+        color: $white;
+        background-color: darken($gray, 20%);
+        &:hover {filter: brightness(.9);}
+    }
+
     &.outline-primary {
         color: $primary;
         border: 1px solid $primary;
@@ -73,5 +79,11 @@ button {
         color: $crush;
         border: 1px solid $crush;
         &:hover{color: #fff;background-color: $crush;}
+    }
+
+    &.outline-gray {
+        color: darken($gray, 20%);
+        border: 1px solid darken($gray, 20%);
+        &:hover{color: #fff;background-color: darken($gray, 20%);}
     }
 }

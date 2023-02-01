@@ -1,33 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './Nav.scss';
 import axios from 'axios';
 
-function Nav() {
+function Nav(props) {
 	const navigate = useNavigate();
 	const [menuData, setMenuData] = useState(null);
 	const [menuGroupActive, setMenuGroupActive] = useState();
 	const [menuActive, setMenuActive] = useState();
 	const [navState, setNavState] = useState('');
 
-	function toggleActive(seq_no) {
-		if (seq_no == menuGroupActive) {
-			setMenuGroupActive();
-		} else {
-			setMenuGroupActive(seq_no);
-		}
-	}
-
-	function toggleActiveMenu(seq_no) {
-		if (seq_no == menuActive) {
-			setMenuActive();
-		} else {
-			setMenuActive(seq_no);
-		}
-	}
-
 	useEffect(() => {
-		axios.get('./menuData.json').then((res) => {
+		axios.get('/menuData.json').then((res) => {
 			setMenuData(res.data);
 		});
 	}, []);
@@ -36,7 +20,19 @@ function Nav() {
 		return (
 			<>
 				<nav className={navState}>
-					<div className="logo">LOGO</div>
+					<Link
+						to="/"
+						className="logo"
+						onClick={() => {
+							setMenuGroupActive();
+							setMenuActive();
+							props.setMenuName();
+							props.setMenuGroupName();
+						}}
+					>
+						<img src="/logo.svg" alt="logo" />
+						<p>Dash Board</p>
+					</Link>
 					<menu>
 						{menuData.menu_group.map((menuGroup) => {
 							let filtered = menuData['menu'].filter(
@@ -51,29 +47,21 @@ function Nav() {
 									}
 									key={menuGroup.menu_group_seq_no}
 								>
-									<div
-										className="menuGroupTitle"
-										onClick={() => {
-											toggleActive(menuGroup.menu_group_seq_no);
-										}}
-									>
+									<div className="menuGroupTitle">
 										<i className={menuGroup.menu_group_icon}></i>
 										<p>{menuGroup.menu_group_name}</p>
 									</div>
-									<ul
-										style={
-											menuGroupActive == menuGroup.menu_group_seq_no
-												? { maxHeight: filtered['length'] * 37 + 'px' }
-												: { maxHeight: 0 + 'px' }
-										}
-									>
+									<ul>
 										{filtered.map((menu) => {
 											return (
 												<li
 													className={menuActive == menu.menu_seq_no ? 'active' : ''}
 													key={menu.menu_seq_no}
 													onClick={() => {
-														toggleActiveMenu(menu.menu_seq_no);
+														setMenuActive(menu.menu_seq_no);
+														setMenuGroupActive(menu.menu_group_seq_no);
+														props.setMenuName(menu.menu_name);
+														props.setMenuGroupName(menuGroup.menu_group_name);
 													}}
 												>
 													<Link to={menu.menu_link_url}>{menu.menu_name}</Link>
@@ -88,21 +76,20 @@ function Nav() {
 					<div
 						className="minimalizeMenu"
 						onClick={() => {
-							navState == '' ? setNavState('mini') : setNavState('');
+							if (navState == '') {
+								setNavState('mini');
+							} else {
+								setNavState('expandingMenuArea');
+								setTimeout(() => {
+									setNavState('');
+								}, 300);
+							}
 						}}
 					>
 						<i className="fa-solid fa-angle-left"></i>
-						<p>Minimalize Menu</p>
+						<p>Hide Menu</p>
 					</div>
 				</nav>
-				<div
-					className={`openMenu ${navState}`}
-					onClick={() => {
-						setNavState('');
-					}}
-				>
-					MENU OPEN
-				</div>
 			</>
 		);
 	}

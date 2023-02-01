@@ -1,0 +1,82 @@
+@import "./color";
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    thead,tbody{
+        tr{
+            th,td{
+                text-align: left;
+                margin: 0;
+                border-bottom: 1px solid lighten($gray, 20%);
+                padding: 5px 0;
+
+                &:first-child{
+                    padding-left: 5px;
+                }
+            }
+
+            &.primary{
+                th,td{
+                    background-color: transparentize($primary, .7);
+                }
+            }
+            &.secondary{
+                th,td{
+                    background-color: transparentize($secondary, .7);
+                }
+            }
+            &.caution{
+                th,td{
+                    background-color: transparentize($caution, .7);
+                }
+            }
+            &.danger{
+                th,td{
+                    background-color: transparentize($danger, .7);
+                }
+            }
+            &.crush{
+                th,td{
+                    background-color: transparentize($crush, .7);
+                }
+            }
+            &.dark{
+                th,td{
+                    background-color: $secondary-darkest;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    thead{
+        tr{
+            th,td{
+                font-weight: 700;
+            }
+        }
+    }
+
+    &.stripe{
+        tbody{
+            tr{
+                &:nth-child(odd){
+                    background-color: lighten($gray, 23%);
+                }
+            }
+        }
+    }
+    &.noBorder{
+        thead,tbody{
+            tr{
+                th,td{
+                    border-bottom: 0px;
+                }
+            }
+        }
+    }
+}
